@@ -1,0 +1,217 @@
+<div class="container-fluid border border-dark">
+  <div class="row mt-5 mr-1 ml-1 ">
+    <div class="col-sm-7 border border-dark">
+      <h4 class="pt-1" style="color:#800080">Search</h4>
+      <hr class="border-dark">
+      <div class="row">
+        <div class="col-sm-6">
+          <label for="exampleInputEmail1">Batch Number</label>
+          <input type="text" class="form-control" placeholder="Batch No">
+
+        </div>
+        <div class="col-sm-6 pt-4">
+          <p class="text-danger">please enter batch number</p>
+
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col-sm-5">
+          <div class="row">
+            <div class="col-sm-10">
+              <label for="exampleInputEmail1">From Date</label>
+              <input id="dater" type="text" class="form-control" placeholder="From Date">
+            </div>
+            <div class="col-sm-2 pl-0 icon_date">
+              <i class="fa fa-calendar fa-2x" aria-hidden="true" (click)="fromDate()"></i>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="col-sm-5">
+          <div class="row">
+            <div class="col-sm-10">
+              <label for="exampleInputEmail1">To Date</label>
+              <input  id="dater1" type="text" class="form-control" placeholder="To Date">
+            </div>
+            <div class="col-sm-2 pl-0 icon_date">
+              <i class="fa fa-calendar fa-2x" aria-hidden="true " (click)="toDate()"></i>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-sm-2 pt-4">
+          <p class="text-danger">choose date</p>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-5">
+
+          </div>
+          <div class="col-sm-7">
+              <div class="row pb-2">
+                  <div class="col-sm-6">
+                      <button type="button" class="btn py-2">Search</button>
+                  </div>
+                  <div class="col-sm-6">
+                      <button type="button" class="btn py-2">Reset</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-5 border border-dark">
+      <h4 class="pt-1" style="color :#800080">Summary</h4>
+      <hr class="border-dark">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Batch no</th>
+            <th scope="col">Total records</th>
+            <th scope="col">Unmatched records</th>
+
+          </tr>
+        </thead>
+        <tbody >
+          <tr>
+            <th scope="row">1001</th>
+            <td>10000</td>
+            <td>100</td>
+
+          </tr>
+          <tr>
+            <th scope="row">1002</th>
+            <td>20000</td>
+            <td>200</td>
+
+          </tr>
+          <tr>
+            <th scope="row">1003</th>
+            <td>40000</td>
+            <td>300</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row  mt-2 mr-1 ml-1">
+      <div class="col-sm-1">
+      <div class="custom-control custom-radio pr-1 ">
+          <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+          <label class="custom-control-label" for="customRadio1">All</label>
+        </div>
+        </div>
+        <div class="col-sm-1">
+        <div class="custom-control custom-radio">
+          <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+          <label class="custom-control-label" for="customRadio2">Difference</label>
+        </div>
+        </div>
+        <div class="col-sm-10"></div>
+    </div>
+    <div class="row pt-2">
+    <div class="col-sm-3">
+        
+        <ul class="list-group-item for_scroll list-hover">
+            <a href=""><li class="list-group-item list-group-item-action active" >1001</li></a>
+            <a href=""><li class="list-group-item list-group-item-action text-danger">1002</li></a>
+            <a href=""><li class="list-group-item list-group-item-action">1003</li></a>
+            <a href=""><li class="list-group-item list-group-item-action">1004</li></a>
+            <a href=""><li class="list-group-item list-group-item-action text-danger">1005</li></a>
+            <li class="list-group-item list-group-item-action" >1006</li>
+            <li class="list-group-item list-group-item-action">1007</li>
+            <li class="list-group-item list-group-item-action text-danger">1008</li>
+            <li class="list-group-item list-group-item-action">1009</li>
+            <li class="list-group-item list-group-item-action">1010</li>
+            <li class="list-group-item list-group-item-action" >1011</li>
+            <li class="list-group-item list-group-item-action">1012</li>
+            <li class="list-group-item list-group-item-action text-danger">1013</li>
+            <li class="list-group-item list-group-item-action">1014</li>
+            <li class="list-group-item list-group-item-action">1015</li>
+            <li class="list-group-item list-group-item-action">1016</li>
+            <li class="list-group-item list-group-item-action">1017</li>
+            <li class="list-group-item list-group-item-action">1018</li>
+            <li class="list-group-item list-group-item-action">1019</li>
+            <li class="list-group-item list-group-item-action">1020</li>
+          </ul>
+    </div>
+
+    <div class="col-sm-9">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Field Name</th>
+                <th scope="col">Generated data</th>
+                <th scope="col">Target data</th>
+    
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td  colspan="3" class="color_grey">
+                    <a class="" data-toggle="collapse" href="#PersonDetails" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fa fa-plus-circle text-dark" aria-hidden="true"></i>
+                      </a>Person Details
+                </td>
+    
+              </tr>
+              
+              </tbody>
+              <tbody class="collapse" id="PersonDetails">
+              <tr >
+                <th scope="row">First Name</th>
+                <td>xxx</td>
+                <td>xxx</td>
+              </tr>
+              <tr >
+                  <th scope="row">Last Name</th>
+                  <td>yyy</td>
+                  <td>yyy</td>
+                </tr>
+                <tr >
+                    <th scope="row">Middle Name</th>
+                    <td>zzz</td>
+                    <td>zzz</td>
+                  </tr>
+              
+              
+            </tbody>
+            <tbody>
+                <tr>
+                    <td  colspan="3" class="color_grey">
+                        <a class="" data-toggle="collapse" href="#AddressDetails" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <i class="fa fa-plus-circle text-dark" aria-hidden="true"></i>
+                          </a>Address Details
+                    </td>
+        
+                  </tr>
+            </tbody>
+            <tbody class="collapse" id="AddressDetails">
+                <tr >
+                  <th scope="row">Line</th>
+                  <td>111 Remo Street</td>
+                  <td>111 Remo Street</td>
+                </tr>
+                <tr >
+                    <th scope="row">City</th>
+                    <td>NewYork</td>
+                    <td>California</td>
+                  </tr>
+                  <tr >
+                      <th scope="row">State</th>
+                      <td>USA</td>
+                      <td>USA</td>
+                    </tr>
+                
+                
+              </tbody>
+            
+          </table>
+
+    </div>
+
+
+</div>
+</div>
+  
