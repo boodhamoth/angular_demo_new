@@ -12,3 +12,12 @@
     background: #37363a;
 
 }
+[data-toggle="collapse"].collapsed i:before{
+    content: "\f13a";
+  }
+    
+[data-toggle="collapse"] i:before{   
+    content: "\f139";
+    
+  }
+  

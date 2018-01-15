@@ -1,25 +1,27 @@
 <div class="container-fluid border border-dark">
   <div class="row mt-5 mr-1 ml-1 ">
     <div class="col-sm-7 border border-dark">
-      <h4 class="pt-1" style="color:#800080">Search</h4>
+      <h4 class="pt-1" style="color:#800080;">Search</h4>
       <hr class="border-dark">
       <div class="row">
         <div class="col-sm-6">
-          <label for="exampleInputEmail1">Batch Number</label>
-          <input type="text" class="form-control" placeholder="Batch No">
+          <label for="exampleInputEmail1" class="font-weight-bold">Batch Number</label>
+          <input type="text" class="form-control" placeholder="Batch No" name="batchno" [(ngModel)]="batchno">
+          
 
         </div>
-        <div class="col-sm-6 pt-4">
-          <p class="text-danger">please enter batch number</p>
+        <div class="col-sm-6">
+          <label for="exampleInputEmail1" class="font-weight-bold">Source System</label>
+          <input type="text" class="form-control" placeholder="Source System"   [disabled]="batchno">
 
         </div>
       </div>
       <div class="row pt-2">
-        <div class="col-sm-5">
+        <div class="col-sm-6">
           <div class="row">
             <div class="col-sm-10">
-              <label for="exampleInputEmail1">From Date</label>
-              <input id="dater" type="text" class="form-control" placeholder="From Date">
+              <label for="exampleInputEmail1" class="font-weight-bold">From Date</label>
+              <input id="dater" type="text" class="form-control" placeholder="From Date"  [disabled]="batchno">
             </div>
             <div class="col-sm-2 pl-0 icon_date">
               <i class="fa fa-calendar fa-2x" aria-hidden="true" (click)="fromDate()"></i>
@@ -28,11 +30,11 @@
 
 
         </div>
-        <div class="col-sm-5">
+        <div class="col-sm-6">
           <div class="row">
             <div class="col-sm-10">
-              <label for="exampleInputEmail1">To Date</label>
-              <input  id="dater1" type="text" class="form-control" placeholder="To Date">
+              <label for="exampleInputEmail1" class="font-weight-bold">To Date</label>
+              <input  id="dater1" type="text" class="form-control" placeholder="To Date" [disabled]="batchno">
             </div>
             <div class="col-sm-2 pl-0 icon_date">
               <i class="fa fa-calendar fa-2x" aria-hidden="true " (click)="toDate()"></i>
@@ -41,7 +43,7 @@
 
         </div>
         <div class="col-sm-2 pt-4">
-          <p class="text-danger">choose date</p>
+          <p class="text-danger"></p>
         </div>
       </div>
       <div class="row">
@@ -51,10 +53,10 @@
           <div class="col-sm-7">
               <div class="row pb-2">
                   <div class="col-sm-6">
-                      <button type="button" class="btn py-2">Search</button>
+                      <button type="button" class="btn py-2 font-weight-bold" [disabled]=(!batchno)>Search</button>
                   </div>
                   <div class="col-sm-6">
-                      <button type="button" class="btn py-2">Reset</button>
+                      <button type="button" class="btn py-2 font-weight-bold" [disabled]=(!batchno)>Reset</button>
                   </div>
               </div>
           </div>
@@ -111,7 +113,7 @@
         <div class="col-sm-10"></div>
     </div>
     <div class="row pt-2">
-    <div class="col-sm-3">
+    <div class="col-sm-2">
         
         <ul class="list-group-item for_scroll list-hover">
             <a href=""><li class="list-group-item list-group-item-action active" >1001</li></a>
@@ -137,7 +139,7 @@
           </ul>
     </div>
 
-    <div class="col-sm-9">
+    <div class="col-sm-10">
         <table class="table table-bordered">
             <thead>
               <tr>
@@ -149,16 +151,15 @@
             </thead>
             <tbody>
               <tr>
-                <td  colspan="3" class="color_grey">
-                    <a class="" data-toggle="collapse" href="#PersonDetails" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        <i class="fa fa-plus-circle text-dark" aria-hidden="true"></i>
-                      </a>Person Details
+                <td  colspan="3" class="color_grey" id="accordion">
+                    <a class="" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      <i class="fa" aria-hidden="true"></i></a>person Details
                 </td>
     
               </tr>
               
               </tbody>
-              <tbody class="collapse" id="PersonDetails">
+              <tbody id="collapseOne" class="panel-collapse collapse in">
               <tr >
                 <th scope="row">First Name</th>
                 <td>xxx</td>
@@ -179,15 +180,14 @@
             </tbody>
             <tbody>
                 <tr>
-                    <td  colspan="3" class="color_grey">
-                        <a class="" data-toggle="collapse" href="#AddressDetails" role="button" aria-expanded="false" aria-controls="collapseExample">
-                            <i class="fa fa-plus-circle text-dark" aria-hidden="true"></i>
-                          </a>Address Details
+                    <td  colspan="3" class="color_grey" id="accordion">
+                        <a class="" data-toggle="collapse" data-parent="#accordion" href="#AddressDetails" role="button" aria-expanded="true" >
+                          <i class="fa" aria-hidden="false"></i></a>AddressDetails
                     </td>
         
                   </tr>
             </tbody>
-            <tbody class="collapse" id="AddressDetails">
+            <tbody class="panel-collapse collapse in" id="AddressDetails">
                 <tr >
                   <th scope="row">Line</th>
                   <td>111 Remo Street</td>

@@ -7,7 +7,7 @@ declare var $:any;
   styleUrls: ['./demo.component.css']
 })
 export class DemoComponent implements OnInit, AfterViewInit {
-
+public batchno:string='';
   constructor() { }
 
   ngOnInit() {
